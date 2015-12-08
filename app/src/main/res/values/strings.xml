@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Junyeol.jo</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_day2__jjy">Day2_JJY</string>
+    <string name="title_activity_day3__jjy">Day3_JJY</string>
+    <string name="title_activity_day4__jjy">Day4_JJY</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_day4_sub">Day4_subActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+</resources>
