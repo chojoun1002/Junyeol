@@ -30,7 +30,7 @@ public class Day4_subActivity extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
-                
+
                 Intent intent = new Intent();
                 if (!editText01.getText().toString().equals("")) {
                     intent.putExtra("result", editText01.getText().toString());
