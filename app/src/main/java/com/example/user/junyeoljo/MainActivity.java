@@ -23,7 +23,6 @@ public class MainActivity extends ActionBarActivity {
         button02 = (Button) findViewById(R.id.button02);
         button03 = (Button) findViewById(R.id.button03);
         button04 = (Button) findViewById(R.id.button04);
-        button04.setVisibility(View.INVISIBLE);
 
         button01.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +47,16 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 //Intent intent=new Intent(MainActivity.this,Day4_JJY.class);
                 Intent intent=new Intent(MainActivity.this,LoginActivity.class);
-                startActivityForResult(intent,REQUEST_CODE);
+                startActivityForResult(intent, REQUEST_CODE);
+
+            }
+        });
+
+        button04.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Day5_JJY.class);
+                startActivity(intent);
 
             }
         });
