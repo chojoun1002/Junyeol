@@ -9,14 +9,14 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class Day5_viewPage extends LinearLayout {
 
     Context mContext;
     WebView webView;
-    TextView textView01;
+    EditText editText01;
     Button button01;
 
     public Day5_viewPage(Context context) {
@@ -38,7 +38,7 @@ public class Day5_viewPage extends LinearLayout {
         inflater.inflate(R.layout.activity_day5_viewpage, this, true);
         webView = (WebView) findViewById(R.id.webview);
         button01 = (Button) findViewById(R.id.button01);
-        textView01 = (TextView) findViewById(R.id.textView01);
+        editText01 = (EditText) findViewById(R.id.editText01);
         webView.setWebViewClient(new WebViewClient());
         WebSettings set = webView.getSettings();
         set.setJavaScriptEnabled(true);
@@ -46,7 +46,7 @@ public class Day5_viewPage extends LinearLayout {
         button01.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                webView.loadUrl(textView01.getText().toString());
+                webView.loadUrl(editText01.getText().toString());
             }
         });
 
