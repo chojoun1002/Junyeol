@@ -55,4 +55,29 @@
             android:textSize="30dp"
             android:textStyle="bold"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/button05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="HW05"
+            android:textSize="30dp"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/button06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="HW06"
+            android:textSize="30dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
 </LinearLayout>

@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
-    Button button01, button02,button03, button04;
+    Button button01, button02,button03, button04, button05, button06;
     final int REQUEST_CODE = 1001;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,11 @@ public class MainActivity extends ActionBarActivity {
         button02 = (Button) findViewById(R.id.button02);
         button03 = (Button) findViewById(R.id.button03);
         button04 = (Button) findViewById(R.id.button04);
+        button05 = (Button) findViewById(R.id.button05);
+        button06 = (Button) findViewById(R.id.button06);
+
+        button05.setVisibility(View.INVISIBLE);
+        button06.setVisibility(View.INVISIBLE);
 
         button01.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +58,24 @@ public class MainActivity extends ActionBarActivity {
         });
 
         button04.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Day5_JJY.class);
+                startActivity(intent);
+
+            }
+        });
+
+        button05.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Day6_JJY.class);
+                startActivity(intent);
+
+            }
+        });
+
+        button06.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,Day5_JJY.class);

@@ -8,4 +8,12 @@
     <string name="title_activity_day4_sub">Day4_subActivity</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_day5__jjy">Day5_JJY</string>
+    <string name="title_activity_day6__jjy">Day6_JJY</string>
+
+    <string name="menu_refresh">새로고침</string>
+    <string name="menu_search">검색</string>
+    <string name="menu_settings">설정</string>
+    <string name="title_activity_person_page">PersonPage</string>
+    <string name="title_activity_day5_view_page">Day5_viewPage</string>
+
 </resources>

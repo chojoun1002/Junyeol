@@ -6,34 +6,52 @@
     tools:context="com.example.user.junyeoljo.Day5_JJY"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:background="#ffffffff" />
 
-        <EditText
-            android:id="@+id/editText01"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="http://m.naver.com"
-            android:textSize="30dp"/>
-        <Button
-            android:id="@+id/button01"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="이동"
-            android:textSize="20dp"
-            android:textStyle="bold"/>
-    </RelativeLayout>
+    <!--<com.sothree.slidinguppanel.SlidingUpPanelLayout-->
+        <!--xmlns:sothree="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/sliding_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="top"-->
+        <!--sothree:umanoPanelHeight="30dp"-->
+        <!--sothree:umanoShadowHeight="4dp" >-->
 
-    <WebView
-        android:id="@+id/webView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <!--<android.support.v4.view.ViewPager-->
+            <!--android:id="@+id/pager"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#ffffffff" />-->
 
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="10"-->
+            <!--android:gravity="center_vertical">-->
+            <!--<EditText-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/editText01"-->
+                <!--android:text="http://www."-->
+                <!--android:layout_weight="9"/>-->
+            <!--<Button-->
+                <!--android:id="@+id/button01"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:text="Go"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:background="@color/material_deep_teal_200"/>-->
 
-    </WebView>
+        <!--</LinearLayout>-->
+
+    <!--</com.sothree.slidinguppanel.SlidingUpPanelLayout>-->
 
 </LinearLayout>
