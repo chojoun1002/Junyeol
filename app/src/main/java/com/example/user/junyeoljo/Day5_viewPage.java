@@ -42,6 +42,7 @@ public class Day5_viewPage extends LinearLayout {
         webView.setWebViewClient(new WebViewClient());
         WebSettings set = webView.getSettings();
         set.setJavaScriptEnabled(true);
+        set.setSupportZoom(true);
 
         button01.setOnClickListener(new OnClickListener() {
             @Override

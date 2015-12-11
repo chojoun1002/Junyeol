@@ -33,7 +33,7 @@ public class Day5_JJY extends ActionBarActivity {
 
         button01 = (Button) findViewById(R.id.button01);
         editText01 = (EditText) findViewById(R.id.editText01);
-
+        adapter.notifyDataSetChanged();
 //        slidingPanelLayout =  (SlidingUpPanelLayout)findViewById(R.id.sliding_layout);
 //
 //        button01.setOnClickListener(new View.OnClickListener() {
@@ -102,6 +102,7 @@ public class Day5_JJY extends ActionBarActivity {
         }
 
         public boolean isViewFromObject(View view, Object object) {
+
             return view.equals(object);
         }
 

@@ -26,7 +26,6 @@ public class MainActivity extends ActionBarActivity {
         button05 = (Button) findViewById(R.id.button05);
         button06 = (Button) findViewById(R.id.button06);
 
-        button05.setVisibility(View.INVISIBLE);
         button06.setVisibility(View.INVISIBLE);
 
         button01.setOnClickListener(new View.OnClickListener() {
