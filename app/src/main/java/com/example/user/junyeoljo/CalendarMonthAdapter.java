@@ -29,6 +29,8 @@ public class CalendarMonthAdapter extends BaseAdapter {
 	public static int headColor = Color.rgb(12, 32, 158);
 	
 	private int selectedPosition = -1;
+
+	private int dayPosition = -1;
 	
 	private MonthItem[] items;
 	
@@ -99,6 +101,7 @@ public class CalendarMonthAdapter extends BaseAdapter {
         
         resetDayNumbers();
         selectedPosition = -1;
+		dayPosition = -1;
 	}
 	
 	public void setNextMonth() {
@@ -107,6 +110,7 @@ public class CalendarMonthAdapter extends BaseAdapter {
         
         resetDayNumbers();
         selectedPosition = -1;
+		dayPosition = -1;
 	}
 
 	public void resetDayNumbers() {
@@ -195,6 +199,7 @@ public class CalendarMonthAdapter extends BaseAdapter {
 		
 		// set properties
 		itemView.setGravity(Gravity.LEFT);
+
 		// 글자 색지정
 		if (columnIndex == 0) {
 			itemView.setTextColor(Color.RED);
@@ -208,10 +213,13 @@ public class CalendarMonthAdapter extends BaseAdapter {
 		// set background color
 		if (position == getSelectedPosition()) {
         	itemView.setBackgroundColor(Color.YELLOW);
-
         } else {
         	itemView.setBackgroundColor(Color.WHITE);
         }
+
+		if(dayPosition == itemView.getItem()) {
+			itemView.setTextColor(Color.GREEN);
+		}
 
 		return itemView;
 	}
@@ -282,6 +290,22 @@ public class CalendarMonthAdapter extends BaseAdapter {
 	 */
 	public int getSelectedPosition() {
 		return selectedPosition;
+	}
+	/**
+	 * set selected row
+	 *
+	 * @param dayPosition
+	 */
+	public void setdayPosition(int dayPosition) {
+		this.dayPosition = dayPosition;
+	}
+	/**
+	 * get selected row
+	 *
+	 * @return dayPosition
+	 */
+	public int getdayPosition() {
+		return dayPosition;
 	}
 	
 
