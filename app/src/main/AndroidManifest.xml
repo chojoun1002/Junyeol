@@ -52,12 +52,17 @@
             android:label="@string/title_activity_day6__jjy" >
         </activity>
         <activity
-            android:name=".PersonPage"
-            android:label="@string/title_activity_person_page" >
-        </activity>
-        <activity
             android:name=".Day5_viewPage"
             android:label="@string/title_activity_day5_view_page" >
+        </activity>
+        <activity
+            android:name=".Day6_addschedule"
+            android:label="@string/title_activity_day6_addschedule"
+            android:theme="@style/Theme.Transparent" >
+        </activity>
+        <activity
+            android:name=".Day6_listView"
+            android:label="@string/title_activity_day6_list_view" >
         </activity>
     </application>
 

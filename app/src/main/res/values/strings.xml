@@ -13,7 +13,11 @@
     <string name="menu_refresh">새로고침</string>
     <string name="menu_search">검색</string>
     <string name="menu_settings">설정</string>
+    <string name="action_add">추가</string>
     <string name="title_activity_person_page">PersonPage</string>
     <string name="title_activity_day5_view_page">Day5_viewPage</string>
+    <string name="title_activity_day6_list">Day6_list</string>
+    <string name="title_activity_day6_addschedule">Day6_addschedule</string>
+    <string name="title_activity_day6_list_view">Day6_listView</string>
 
 </resources>
