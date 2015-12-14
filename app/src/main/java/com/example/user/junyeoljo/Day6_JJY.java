@@ -107,13 +107,7 @@ public class Day6_JJY extends ActionBarActivity implements AdapterView.OnItemCli
                 monthViewAdapter.notifyDataSetChanged();
 
                 setMonthText();
-                for(int i=0;i<listViewAdapter.getCount();i++) {
-                    String[] result1 = listViewAdapter.getItemDay(i).toString().split("-");
-                    if(Integer.parseInt(result1[1])== (curMonth + 1)) {
-                        monthViewAdapter.setdayPosition(Integer.parseInt(result1[2]));
-                    }
-                    //monthViewAdapter.setSelectedPosition(monthViewAdapter.firstDay + Integer.parseInt(selday1) - 1);
-                }
+                setDayTextColor();
             }
         });
 
@@ -125,13 +119,7 @@ public class Day6_JJY extends ActionBarActivity implements AdapterView.OnItemCli
                 monthViewAdapter.notifyDataSetChanged();
 
                 setMonthText();
-                for(int i=0;i<listViewAdapter.getCount();i++) {
-                    String[] result1 = listViewAdapter.getItemDay(i).toString().split("-");
-                    if(Integer.parseInt(result1[1])== (curMonth + 1)) {
-                        monthViewAdapter.setdayPosition(Integer.parseInt(result1[2]));
-                    }
-                    //monthViewAdapter.setSelectedPosition(monthViewAdapter.firstDay + Integer.parseInt(selday1) - 1);
-                }
+                setDayTextColor();
             }
         });
 
@@ -146,6 +134,16 @@ public class Day6_JJY extends ActionBarActivity implements AdapterView.OnItemCli
         curMonth = monthViewAdapter.getCurMonth();
 
         monthText.setText(curYear + "년 " + (curMonth + 1) + "월");
+
+    }
+
+    private  void setDayTextColor() {
+        for(int i=0;i<listViewAdapter.getCount();i++) {
+            String[] result1 = listViewAdapter.getItemDay(i).toString().split("-");
+            if (Integer.parseInt(result1[0]) == (curYear) && Integer.parseInt(result1[1]) == (curMonth + 1)) {
+                monthViewAdapter.setdayPosition(Integer.parseInt(result1[2]));
+            }
+        }
     }
 
 
@@ -240,8 +238,8 @@ public class Day6_JJY extends ActionBarActivity implements AdapterView.OnItemCli
         CurMonth = Integer.toString(curMonth);
         Curday = selday;
 
-        monthViewAdapter.setdayPosition(CurSetday);
-
+        //monthViewAdapter.setdayPosition(CurSetday);
+        setDayTextColor();
         monthViewAdapter.setSelectedPosition(monthViewAdapter.firstDay + CurSetday - 1);
         monthViewAdapter.notifyDataSetChanged();
 

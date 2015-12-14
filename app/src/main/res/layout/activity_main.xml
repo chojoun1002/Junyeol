@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:text="HW01"
+            android:text="activity이동하기"
             android:textSize="30dp"
             android:textStyle="bold"/>
         <Button
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:text="HW02"
+            android:text="이미지이동하기"
             android:textSize="30dp"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:text="HW03"
+            android:text="로그인사용하기"
             android:textSize="30dp"
             android:textStyle="bold"/>
         <Button
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:text="HW04"
+            android:text="Viewpager사용하기"
             android:textSize="30dp"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:text="HW05"
+            android:text="캘린터일정만들기"
             android:textSize="30dp"
             android:textStyle="bold"/>
         <Button
