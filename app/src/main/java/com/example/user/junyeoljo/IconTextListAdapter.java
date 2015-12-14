@@ -25,8 +25,9 @@ public class IconTextListAdapter extends BaseAdapter {
         mItems.add(it);
     }
 
-    public void removeItem(IconTextItem it) {
-        mItems.remove(it);
+    public void removeItem(int position) {
+        mItems.remove(position);
+        this.notifyDataSetChanged();
     }
 
     public void setListItems(List<IconTextItem> lit) {
@@ -61,7 +62,7 @@ public class IconTextListAdapter extends BaseAdapter {
         return position;
     }
 
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         final IconTextView itemView;
         final int pos = position;
 

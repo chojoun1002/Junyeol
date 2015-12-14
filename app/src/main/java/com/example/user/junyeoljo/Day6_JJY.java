@@ -3,6 +3,7 @@ package com.example.user.junyeoljo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -61,6 +62,21 @@ public class Day6_JJY extends ActionBarActivity implements AdapterView.OnItemCli
         // listView1 클릭시 이벤스 설정.
         listView1.setOnItemClickListener(this);
 
+        listView1.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d("position",Integer.toString(position-1));
+                listViewAdapter.removeItem(position);
+                for(int i=0;i<listViewAdapter.getCount();i++) {
+                    String[] result1 = listViewAdapter.getItemDay(i).toString().split("-");
+                    if (Integer.parseInt(result1[1]) == (curMonth + 1)) {
+                        monthViewAdapter.setdayPosition(Integer.parseInt(result1[2]));
+                    }
+                }
+                monthViewAdapter.notifyDataSetChanged();
+                return true;
+            }
+        });
         // 월별 캘린더 뷰 객체 참조
         monthView = (CalendarMonthView) findViewById(R.id.monthView);
         monthViewAdapter = new CalendarMonthAdapter(this);
@@ -227,6 +243,8 @@ public class Day6_JJY extends ActionBarActivity implements AdapterView.OnItemCli
         monthViewAdapter.setdayPosition(CurSetday);
 
         monthViewAdapter.setSelectedPosition(monthViewAdapter.firstDay + CurSetday - 1);
+        monthViewAdapter.notifyDataSetChanged();
+
 
     }
 
