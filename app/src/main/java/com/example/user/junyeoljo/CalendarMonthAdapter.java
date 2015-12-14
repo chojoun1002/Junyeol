@@ -33,6 +33,10 @@ public class CalendarMonthAdapter extends BaseAdapter {
 	private int dayPosition = -1;
 	
 	private MonthItem[] items;
+
+	private int instance0 = -1;
+	private int instance1 = -1;
+	private int instance2 = -1;
 	
 	private int countColumn = 7;
 	
@@ -102,6 +106,9 @@ public class CalendarMonthAdapter extends BaseAdapter {
         resetDayNumbers();
         selectedPosition = -1;
 		dayPosition = -1;
+		instance0 = -1;
+		instance1 = -1;
+		instance2 = -1;
 	}
 	
 	public void setNextMonth() {
@@ -111,6 +118,9 @@ public class CalendarMonthAdapter extends BaseAdapter {
         resetDayNumbers();
         selectedPosition = -1;
 		dayPosition = -1;
+		instance0 = -1;
+		instance1 = -1;
+		instance2 = -1;
 	}
 
 	public void resetDayNumbers() {
@@ -200,11 +210,30 @@ public class CalendarMonthAdapter extends BaseAdapter {
 		// set properties
 		itemView.setGravity(Gravity.LEFT);
 
+		if(dayPosition == itemView.getItem()) {
+			//itemView.setTextColor(Color.GREEN);
+			columnIndex = 7;
+		}
+		if(instance0 != -1) {
+			if(itemView.getItem() == instance0)
+			columnIndex = 7;
+		}
+		if(instance1 != -1) {
+			if(itemView.getItem() == instance1)
+				columnIndex = 7;
+		}
+		if(instance2 != -1) {
+			if(itemView.getItem() == instance2)
+				columnIndex = 7;
+		}
+
 		// 글자 색지정
 		if (columnIndex == 0) {
 			itemView.setTextColor(Color.RED);
 		} else if(columnIndex == 6) {
 			itemView.setTextColor(Color.BLUE);
+		}else if(columnIndex == 7) {
+			itemView.setTextColor(Color.GREEN);
 		}
 		else {
 			itemView.setTextColor(Color.BLACK);
@@ -217,9 +246,9 @@ public class CalendarMonthAdapter extends BaseAdapter {
         	itemView.setBackgroundColor(Color.WHITE);
         }
 
-		if(dayPosition == itemView.getItem()) {
-			itemView.setTextColor(Color.GREEN);
-		}
+//		if(dayPosition == itemView.getItem()) {
+//			itemView.setTextColor(Color.GREEN);
+//		}
 
 		return itemView;
 	}
@@ -298,6 +327,15 @@ public class CalendarMonthAdapter extends BaseAdapter {
 	 */
 	public void setdayPosition(int dayPosition) {
 		this.dayPosition = dayPosition;
+		if(instance0 == -1){
+			instance0 = dayPosition;
+		}
+		if(instance1 == -1){
+			instance1 = dayPosition;
+		}
+		if(instance2 == -1){
+			instance2 = dayPosition;
+		}
 	}
 	/**
 	 * get selected row

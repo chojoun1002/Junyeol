@@ -67,13 +67,15 @@ public class Day6_JJY extends ActionBarActivity implements AdapterView.OnItemCli
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("position",Integer.toString(position-1));
                 listViewAdapter.removeItem(position);
-                for(int i=0;i<listViewAdapter.getCount();i++) {
-                    String[] result1 = listViewAdapter.getItemDay(i).toString().split("-");
-                    if (Integer.parseInt(result1[1]) == (curMonth + 1)) {
-                        monthViewAdapter.setdayPosition(Integer.parseInt(result1[2]));
-                    }
-                }
+                setDayTextColor();
+//                for(int i=0;i<listViewAdapter.getCount();i++) {
+//                    String[] result1 = listViewAdapter.getItemDay(i).toString().split("-");
+//                    if (Integer.parseInt(result1[1]) == (curMonth + 1)) {
+//                        monthViewAdapter.setdayPosition(Integer.parseInt(result1[2]));
+//                    }
+//                }
                 monthViewAdapter.notifyDataSetChanged();
+                monthViewAdapter.setSelectedPosition(monthViewAdapter.firstDay + CurSetday - 1);
                 return true;
             }
         });
