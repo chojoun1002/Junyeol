@@ -1,14 +1,13 @@
 package com.example.user.junyeoljo;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.ActionBarActivity;
 
-public class Splash extends ActionBarActivity {
+public class Splash extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
 
@@ -18,6 +17,7 @@ public class Splash extends ActionBarActivity {
             @Override
             public void run() {
                 finish();
+                //startActivity(new Intent(Splash.this, MainActivity.class));
                 // 3 초후 이미지를 닫아버림
             }
         }, 3000);

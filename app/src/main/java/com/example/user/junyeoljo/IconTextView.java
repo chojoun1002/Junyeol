@@ -54,9 +54,6 @@ public class IconTextView extends LinearLayout {
 
     /**
      * set Text
-     *
-     * @param index
-     * @param data
      */
     public void setText(int index, String data) {
         if (index == 0) {

@@ -3,20 +3,16 @@ package com.example.user.junyeoljo;
 /**
  * 일자 정보를 담기 위한 클래스 정의
  */
-public class MonthItem {
+public class MonthItem_Day7 {
 
 	private int dayValue;
 	private String weatherValue=null;//날씨정보
 
-	public MonthItem() {
+	public MonthItem_Day7() {
 
-	}
-	public MonthItem(int day) {
-
-		dayValue = day;
 	}
 	//날씨정보 저장을 위해 인자와 변수를 만들었다.
-	public MonthItem(int day,String weather) {
+	public MonthItem_Day7(int day, String weather) {
 		dayValue = day;
 		weatherValue = weather;
 	}

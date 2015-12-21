@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
     Button button01, button02,button03, button04, button05, button06;
     final int REQUEST_CODE = 1001;
@@ -19,69 +19,75 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         startActivity(new Intent(this, Splash.class));
 
+        //button01 = (Button) findViewById(R.id.button01);
         button01 = (Button) findViewById(R.id.button01);
+        button01.setOnClickListener(this);
         button02 = (Button) findViewById(R.id.button02);
+        button02.setOnClickListener(this);
         button03 = (Button) findViewById(R.id.button03);
+        button03.setOnClickListener(this);
         button04 = (Button) findViewById(R.id.button04);
+        button04.setOnClickListener(this);
         button05 = (Button) findViewById(R.id.button05);
+        button05.setOnClickListener(this);
         button06 = (Button) findViewById(R.id.button06);
+        button06.setOnClickListener(this);
+        //button06.setVisibility(View.INVISIBLE);
 
-        button06.setVisibility(View.INVISIBLE);
-
-        button01.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Day2_JJY.class);
-                startActivity(intent);
-
-            }
-        });
-
-        button02.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,Day3_JJY.class);
-                startActivity(intent);
-
-            }
-        });
-
-        button03.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Intent intent=new Intent(MainActivity.this,Day4_JJY.class);
-                Intent intent=new Intent(MainActivity.this,LoginActivity.class);
-                startActivityForResult(intent, REQUEST_CODE);
-
-            }
-        });
-
-        button04.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,Day5_JJY.class);
-                startActivity(intent);
-
-            }
-        });
-
-        button05.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,Day6_JJY.class);
-                startActivity(intent);
-
-            }
-        });
-
-        button06.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,Day5_JJY.class);
-                startActivity(intent);
-
-            }
-        });
+//        button01.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, Day2_JJY.class);
+//                startActivity(intent);
+//
+//            }
+//        });
+//
+//        button02.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(MainActivity.this,Day3_JJY.class);
+//                startActivity(intent);
+//
+//            }
+//        });
+//
+//        button03.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //Intent intent=new Intent(MainActivity.this,Day4_JJY.class);
+//                Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+//                startActivityForResult(intent, REQUEST_CODE);
+//
+//            }
+//        });
+//
+//        button04.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(MainActivity.this,Day5_JJY.class);
+//                startActivity(intent);
+//
+//            }
+//        });
+//
+//        button05.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(MainActivity.this,Day6_JJY.class);
+//                startActivity(intent);
+//
+//            }
+//        });
+//
+//        button06.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(MainActivity.this,Day5_JJY.class);
+//                startActivity(intent);
+//
+//            }
+//        });
 
     }
 
@@ -117,5 +123,41 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button01 : {
+                Intent intent = new Intent(MainActivity.this, Day2_JJY.class);
+                startActivity(intent);
+            }
+            break;
+            case R.id.button02 : {
+                Intent intent=new Intent(MainActivity.this,Day3_JJY.class);
+                startActivity(intent);
+            }
+            break;
+            case R.id.button03 : {
+                Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+                startActivityForResult(intent, REQUEST_CODE);
+            }
+            break;
+            case R.id.button04 : {
+                Intent intent=new Intent(MainActivity.this,Day5_JJY.class);
+                startActivity(intent);
+            }
+            break;
+            case R.id.button05 : {
+                Intent intent=new Intent(MainActivity.this,Day6_JJY.class);
+                startActivity(intent);
+            }
+            break;
+            case R.id.button06 : {
+                Intent intent=new Intent(MainActivity.this,Day7_JJY.class);
+                startActivity(intent);
+            }
+            break;
+        }
     }
 }

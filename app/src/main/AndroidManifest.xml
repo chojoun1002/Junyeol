@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.user.junyeoljo" >
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -20,6 +20,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Splash"
+            android:theme="@style/Theme.Transparent" >
+        </activity>
+        <activity
             android:name=".Day2_JJY"
             android:label="@string/title_activity_day2__jjy" >
         </activity>
@@ -30,10 +34,6 @@
         <activity
             android:name=".Day4_JJY"
             android:label="@string/title_activity_day4__jjy" >
-        </activity>
-        <activity
-            android:name=".Splash"
-            android:label="@string/title_activity_splash" >
         </activity>
         <activity
             android:name=".Day4_subActivity"
@@ -61,8 +61,8 @@
             android:theme="@style/Theme.Transparent" >
         </activity>
         <activity
-            android:name=".Day6_listView"
-            android:label="@string/title_activity_day6_list_view" >
+            android:name=".Day7_JJY"
+            android:label="@string/title_activity_day7__jjy" >
         </activity>
     </application>
 
